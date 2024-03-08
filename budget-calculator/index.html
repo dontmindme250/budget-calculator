@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Budget Calculator</title>
+</head>
+  
+<body>
+
+<div class="container">
+  <h2>Budget Calculator</h2>
+  
+  <h4>Incomes</h4>
+  <label for="income">Monthly Income:</label>
+  <input type="number" id="income" placeholder="Enter your monthly income">
+  
+  <label for="additionalIncome">Additional Income:</label>
+  <input type="number" id="additionalIncome" placeholder="Enter your additional income">
+  
+  <h4>Expenses</h4>
+  <label for="rent">Rent/Mortgage:</label>
+  <input type="number" id="rent" placeholder="Enter your rent or mortgage">
+  
+  <label for="utilities">Utilities:</label>
+  <input type="number" id="utilities" placeholder="Enter your utilities expense">
+  
+  <label for="groceries">Groceries:</label>
+  <input type="number" id="groceries" placeholder="Enter your groceries expense">
+  
+  <button onclick="calculateBudget()">Calculate</button>
+  
+  <h3>Result:</h3>
+  <p id="result"></p>
+  
+  <h3>Breakdown:</h3>
+  <p id="breakdown"></p>
+  
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
