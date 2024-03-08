@@ -6,6 +6,6 @@ the budget calculator is a simple web-based application made to help users manag
 ## getting started
 #### to use the budget calculator, follow these steps
 
-1. clone the project: clone or download the project to your local machine
-2. go to the project directory: open your terminal and navigate to the project directory.
-3. open the project: open the `index.html` file in any web browser to start using the budget calculator.
+1. **clone the project**: clone or download the project to your local machine
+2. **go to the project directory**: open your terminal and navigate to the project directory.
+3. **open the project**: open the `index.html` file in any web browser to start using the budget calculator.
