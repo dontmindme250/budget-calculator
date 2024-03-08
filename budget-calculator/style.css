@@ -27,3 +27,16 @@ button {
 	color: white;
 	cursor: pointer;
 }
+
+button:hover {
+	background-color: #45a049;
+}
+
+#result {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#breakdown {
+	margin-top: 10px;
+}
