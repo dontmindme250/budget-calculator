@@ -16,3 +16,8 @@ the budget calculator is a simple web-based application made to help users manag
 1. **enter your income**: input your monthly income and other income sources in the designated fields
 2. **input your expenses**: enter your montly expenses in the required fields
 3. **calculate**: click the calculate button to see your budget and breakdown
+
+## technologies
+- **HTML**: structure of the calculator ui
+- **CSS**: styling of the calculator to make it visually appealing
+- **JavaScript**: functionality of the calculator
