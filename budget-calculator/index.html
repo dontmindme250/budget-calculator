@@ -29,6 +29,12 @@
   <label for="groceries">Groceries:</label>
   <input type="number" id="groceries" placeholder="Enter your groceries expense">
 
+  <label for="transportation">Transportation:</label>
+  <input type="number" id="transportation" placeholder="Enter your transportation expense">
+
+  <label for="entertainment">Entertainment:</label>
+  <input type="number" id="entertainment" placeholder="Enter your entertainment expense">
+
   <label for="savingsGoal">Savings Goal:</label>
   <input type="number" id="savingsGoal" placeholder="Enter your savings goal">
 
@@ -37,16 +43,19 @@
 
   
   <button onclick="calculateBudget()">Calculate</button>
+  <button onclick="exportBudgetReport()">Export Report</button>
   
   <h3>Result:</h3>
   <p id="result"></p>
   
   <h3>Breakdown:</h3>
   <p id="breakdown"></p>
+
+  <canvas id="budgetChart" width="400" height="400"></canvas>
   
 </div>
 
-<script src="/budget-calculator/script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/budget-calculator/script.js"></script>
 </body>
 </html>
