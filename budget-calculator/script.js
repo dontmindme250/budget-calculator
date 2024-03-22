@@ -87,3 +87,14 @@ function drawChart() {
         }
     });
 }
+
+document.getElementById("toggleOptionalExpenses").addEventListener("click", function() {
+    var optionalExpensesSection = document.getElementById("optionalExpenses");
+    if (optionalExpensesSection.style.display === "none") {
+        optionalExpensesSection.style.display = "block";
+        this.textContent = "Hide Optional Expenses";
+    } else {
+        optionalExpensesSection.style.display = "none";
+        this.textContent = "Show Optional Expenses";
+    }
+});
