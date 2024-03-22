@@ -6,6 +6,10 @@ function setTextContentById(id, text) {
     document.getElementById(id).innerText = text;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    displayCalculationHistory();
+});
+
 function calculateBudget() {
     var monthlyIncome = getValueById("income");
     var additionalIncome = getValueById("additionalIncome");
@@ -43,6 +47,40 @@ function calculateBudget() {
     setTextContentById("breakdown", breakdownText);
 
 drawChart();
+
+    var calculationHistory = {
+        datetime: new Date().toISOString(),
+        inputs: { monthlyIncome, additionalIncome, rent, utilities, groceries, savingsGoal, otherExpenses, entertainment, transportation, pets, childCare, healthInsurance, loans },
+        outputs: { totalIncome, totalExpenses, moneyLeft, finalBudget, resultText }
+    };
+    storeInLocalStorage(calculationHistory);
+}
+
+function storeInLocalStorage(calculation) {
+    let history = localStorage.getItem("budgetCalculationHistory");
+    if (history) {
+        history = JSON.parse(history);
+    } else {
+        history = [];
+    }
+    history.push(calculation);
+    localStorage.setItem("budgetCalculationHistory", JSON.stringify(history));
+}
+
+function displayCalculationHistory() {
+    let history = localStorage.getItem("budgetCalculationHistory");
+    if (history) {
+        history = JSON.parse(history);
+        let historyElement = document.getElementById("calculationHistory");
+        historyElement.innerHTML = ""; // Clear previous history
+        history.forEach(item => {
+            let entry = document.createElement("div");
+            entry.innerHTML = `<strong>Calculation Date:</strong> ${item.datetime}<br>
+                               <strong>Final Budget:</strong> ${item.outputs.finalBudget.toFixed(2)}<br>
+                               <hr>`;
+            historyElement.appendChild(entry);
+        });
+    }
 }
 
 function exportBudgetReport() {
