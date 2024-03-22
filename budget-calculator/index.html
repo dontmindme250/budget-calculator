@@ -11,14 +11,15 @@
 
 <div class="container">
   <h2>Budget Calculator</h2>
-  
+  <!-- incomes -->
   <h4>Incomes</h4>
   <label for="income">Monthly Income:</label>
   <input type="number" id="income" placeholder="Enter your monthly income">
   
   <label for="additionalIncome">Additional Income:</label>
   <input type="number" id="additionalIncome" placeholder="Enter your additional income">
-  
+
+  <!-- expenses -->
   <h4>Expenses</h4>
   <label for="rent">Rent/Mortgage:</label>
   <input type="number" id="rent" placeholder="Enter your rent or mortgage">
@@ -41,18 +42,23 @@
   <label for="otherExpenses">Other Expenses:</label>
   <input type="number" id="otherExpenses" placeholder="Enter your other expenses">
 
-  <h4>Optional Expenses</h4>
-  <label for="childCare">Childcare:</label>
-  <input type="number" id="childCare" placeholder="Enter your childcare expense">
+  <!-- optional expenses -->
+  <h4>Optional Expenses <button id="toggleOptionalExpenses">Show Optional Expenses</button></h4>
 
-  <label for="healthInsurance">Health Insurance:</label>
-  <input type="number" id="healthInsurance" placeholder="Enter your health insurance expense">
+  <div id="optionalExpenses" style="display: none;">
+    <label for="childCare">Childcare:</label>
+    <input type="number" id="childCare" placeholder="Enter your childcare expense">
 
-  <label for="loans">Loans:</label>
-  <input type="number" id="loans" placeholder="Enter your loan payments">
+    <label for="healthInsurance">Health Insurance:</label>
+    <input type="number" id="healthInsurance" placeholder="Enter your health insurance expense">
 
-  <label for="pets">Pets:</label>
-  <input type="number" id="pets" placeholder="Enter your pets related expense">
+    <label for="loans">Loans:</label>
+    <input type="number" id="loans" placeholder="Enter your loan payments">
+
+    <label for="pets">Pets:</label>
+    <input type="number" id="pets" placeholder="Enter your pets related expense">
+  </div>
+
 
   
   <button onclick="calculateBudget()">Calculate</button>
