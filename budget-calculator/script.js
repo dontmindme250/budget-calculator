@@ -16,9 +16,13 @@ function calculateBudget() {
     var otherExpenses = getValueById("otherExpenses");
     var entertainment = getValueById("entertainment");
     var transportation = getValueById("transportation");
+    var pets = getValueById("pets");
+    var childCare = getValueById("childCare");
+    var healthInsurance = getValueById("healthInsurance");
+    var loans = getValueById("loans");
 
     var totalIncome = monthlyIncome + additionalIncome;
-    var totalExpenses = rent + utilities + groceries + otherExpenses + entertainment + transportation;
+    var totalExpenses = rent + utilities + groceries + otherExpenses + entertainment + transportation + pets + childCare + healthInsurance + loans;
 
     var moneyLeft = totalIncome - totalExpenses;
     var finalBudget = moneyLeft - savingsGoal;
